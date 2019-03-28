@@ -8,7 +8,9 @@
     clear: left;
     padding: 10px;
 }
-
+#Navigationn #Lists ul{
+    margin-right: 80px;
+}
 #Navigationn #Lists ul li{
     text-decoration: none;
     display: inline;

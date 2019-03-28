@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Navigation.css'
+import './Navigation.css';
 
                                 /*<ul id="AboutUs">
                                     <li>Contact Us</li>
@@ -10,16 +10,18 @@ class Navigation extends Component{
     render(){
         return(
             <div>
+                <div class="toggle"></div>
+                <div class="overlay"></div>
                 <div id="Navigationn">
-                    <div id="logo">Logo</div>
+                    <div id="logo"><a href="#">Logo</a></div>
                     <div id="Lists">
                         <ul>
-                            <li>Contact</li>
-                            <li>Pricing</li>
-                            <li>Portfolio</li>
-                            <li>Services</li>
-                            <li>About Us</li>
-                            <li><strong>Home</strong></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#"><strong>Home</strong></a></li>
 
                         </ul>
                     </div>
