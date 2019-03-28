@@ -1,28 +1,60 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
+
+  constructor()
+  {
+    super();
+    this.state = { displayElement: false};
+    console.log('console', this);
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+
+  // readMore()
+  //   {
+  //     console.log('read More', this);
+  //     this.setState({displayElement: true});
+  //   }
+
+
+  toggleDisplay()
+  {
+    this.setState({displayElement: !this.state.displayElement});
+  }
+
+
+  render(){
+    // const bio = this.state.displayElement ? (
+    //   <div>
+    //   <p>Welcome</p>
+    //     <p>Welcome</p></div>
+    // ):null
+    
+    // if(this.state.displayElement === false)
+    // {
+    //   bio = null;
+    // }
+ 
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div>
+        <p>Welcome</p>
+        {
+          this.state.displayElement ? (
+            <div>
+            <p>Welcome</p>
+              <p>Welcome</p></div>
+          ):null
+        }
+        <p>Welcome7</p>
+        <p>Welcome</p>
+        <p>Welcome</p>
+
+
+        <button onClick={this.toggleDisplay}>Button</button>
+        </div>
+     
     );
   }
 }
-
 export default App;
